@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TeacherTrackerWorldMap from "./Controller/TeacherTrackerWorldMap";
+import TeacherTrackerCountryMap from "./Controller/TeacherTrackerCountryMap";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<div className="teacherTrackerMapContainer">
+				<h2>World Map</h2>
+				<TeacherTrackerWorldMap />
+			</div>
+			<div className="teacherTrackerMapContainer">
+				<h2>India Map</h2>
+				<TeacherTrackerCountryMap countryCode={"IN"} />
+			</div>
+			<div className="teacherTrackerMapContainer">
+				<h2>Australia Map</h2>
+				<TeacherTrackerCountryMap countryCode={"AU"} />
+			</div>
+		</>
+	);
 }
 
 export default App;
